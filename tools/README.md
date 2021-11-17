@@ -8,7 +8,7 @@ included in the split without the extension.
 
 The below command runs the converter:
 
-```py
+```sh
 cd tools
 python voc2coco.py \
     --ann_dir annotations/ \
@@ -25,7 +25,7 @@ COCO dataset to use relative image paths.
 
 The below command runs this script:
 
-```py
+```sh
 cd tools
 python coco_corrector.py
 ```

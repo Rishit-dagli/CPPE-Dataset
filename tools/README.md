@@ -10,7 +10,12 @@ The below command runs the converter:
 
 ```py
 cd tools
-python voc2coco.py --ann_dir annotations/ --output coco/test.json --ann_ids test_ids.txt --labels labels.txt --ext xml
+python voc2coco.py \
+    --ann_dir annotations/ \
+    --output coco/test.json \
+    --ann_ids test_ids.txt \
+    --labels labels.txt \
+    --ext xml
 ```
 
 ## Correct COCO Dataset

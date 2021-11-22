@@ -1,18 +1,17 @@
 model = dict(
     type="FasterRCNN",
     backbone=dict(
-        type="ResNet",
-        depth=101,
-        num_stages=4,
+        type="RegNet",
+        arch="regnetx_3.2gf",
         out_indices=(0, 1, 2, 3),
         frozen_stages=1,
         norm_cfg=dict(type="BN", requires_grad=True),
         norm_eval=True,
         style="pytorch",
-        init_cfg=dict(type="Pretrained", checkpoint="torchvision://resnet101"),
+        init_cfg=dict(type="Pretrained", checkpoint="open-mmlab://regnetx_3.2gf"),
     ),
     neck=dict(
-        type="FPN", in_channels=[256, 512, 1024, 2048], out_channels=256, num_outs=5
+        type="FPN", in_channels=[96, 192, 432, 1008], out_channels=256, num_outs=5
     ),
     rpn_head=dict(
         type="RPNHead",
@@ -121,7 +120,7 @@ dataset_type = "COCODataset"
 data_root = "data/coco/"
 
 img_norm_cfg = dict(
-    mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True
+    mean=[103.53, 116.28, 123.675], std=[57.375, 57.12, 58.395], to_rgb=False
 )
 
 train_pipeline = [
@@ -131,14 +130,15 @@ train_pipeline = [
     dict(type="RandomFlip", flip_ratio=0.5),
     dict(
         type="Normalize",
-        mean=[123.675, 116.28, 103.53],
-        std=[58.395, 57.12, 57.375],
-        to_rgb=True,
+        mean=[103.53, 116.28, 123.675],
+        std=[57.375, 57.12, 58.395],
+        to_rgb=False,
     ),
     dict(type="Pad", size_divisor=32),
     dict(type="DefaultFormatBundle"),
     dict(type="Collect", keys=["img", "gt_bboxes", "gt_labels"]),
 ]
+
 test_pipeline = [
     dict(type="LoadImageFromFile"),
     dict(
@@ -150,9 +150,9 @@ test_pipeline = [
             dict(type="RandomFlip"),
             dict(
                 type="Normalize",
-                mean=[123.675, 116.28, 103.53],
-                std=[58.395, 57.12, 57.375],
-                to_rgb=True,
+                mean=[103.53, 116.28, 123.675],
+                std=[57.375, 57.12, 58.395],
+                to_rgb=False,
             ),
             dict(type="Pad", size_divisor=32),
             dict(type="ImageToTensor", keys=["img"]),
@@ -175,9 +175,9 @@ data = dict(
             dict(type="RandomFlip", flip_ratio=0.5),
             dict(
                 type="Normalize",
-                mean=[123.675, 116.28, 103.53],
-                std=[58.395, 57.12, 57.375],
-                to_rgb=True,
+                mean=[103.53, 116.28, 123.675],
+                std=[57.375, 57.12, 58.395],
+                to_rgb=False,
             ),
             dict(type="Pad", size_divisor=32),
             dict(type="DefaultFormatBundle"),
@@ -200,9 +200,9 @@ data = dict(
                     dict(type="RandomFlip"),
                     dict(
                         type="Normalize",
-                        mean=[123.675, 116.28, 103.53],
-                        std=[58.395, 57.12, 57.375],
-                        to_rgb=True,
+                        mean=[103.53, 116.28, 123.675],
+                        std=[57.375, 57.12, 58.395],
+                        to_rgb=False,
                     ),
                     dict(type="Pad", size_divisor=32),
                     dict(type="ImageToTensor", keys=["img"]),
@@ -227,9 +227,9 @@ data = dict(
                     dict(type="RandomFlip"),
                     dict(
                         type="Normalize",
-                        mean=[123.675, 116.28, 103.53],
-                        std=[58.395, 57.12, 57.375],
-                        to_rgb=True,
+                        mean=[103.53, 116.28, 123.675],
+                        std=[57.375, 57.12, 58.395],
+                        to_rgb=False,
                     ),
                     dict(type="Pad", size_divisor=32),
                     dict(type="ImageToTensor", keys=["img"]),
@@ -243,7 +243,7 @@ data = dict(
 
 evaluation = dict(interval=1, metric="bbox")
 
-optimizer = dict(type="SGD", lr=0.02, momentum=0.9, weight_decay=0.0001)
+optimizer = dict(type="SGD", lr=0.02, momentum=0.9, weight_decay=5e-05)
 
 optimizer_config = dict(grad_clip=None)
 
@@ -262,7 +262,6 @@ log_config = dict(
 custom_hooks = [dict(type="NumClassCheckHook")]
 
 dist_params = dict(backend="nccl")
-
 log_level = "INFO"
 
 load_from = None
@@ -272,7 +271,3 @@ resume_from = None
 workflow = [("train", 1)]
 
 classes = ("Coverall", "Face_Shield", "Gloves", "Goggles", "Mask")
-
-work_dir = "./work_dirs/faster_rcnn_r101_fpn_2x_coco"
-
-gpu_ids = range(0, 1)

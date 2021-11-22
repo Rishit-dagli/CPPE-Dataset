@@ -95,6 +95,7 @@ train_pipeline = [
     dict(type="DefaultFormatBundle"),
     dict(type="Collect", keys=["img", "gt_bboxes", "gt_labels"]),
 ]
+
 test_pipeline = [
     dict(type="LoadImageFromFile"),
     dict(
@@ -211,7 +212,3 @@ runner = dict(type="EpochBasedRunner", max_epochs=273)
 evaluation = dict(interval=1, metric=["bbox"])
 
 classes = ("Coverall", "Face_Shield", "Gloves", "Goggles", "Mask")
-
-work_dir = "./work_dirs/yolov3_d53_mstrain-608_273e_coco"
-
-gpu_ids = range(0, 1)

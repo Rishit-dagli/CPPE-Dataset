@@ -372,7 +372,3 @@ lr_config = dict(policy="step", step=[40])
 runner = dict(type="EpochBasedRunner", max_epochs=50)
 
 classes = ("Coverall", "Face_Shield", "Gloves", "Goggles", "Mask")
-
-work_dir = "./work_dirs/deformable_detr_refine_r50_16x2_50e_coco"
-
-gpu_ids = range(0, 1)

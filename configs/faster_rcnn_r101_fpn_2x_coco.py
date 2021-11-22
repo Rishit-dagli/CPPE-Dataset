@@ -2,29 +2,14 @@ model = dict(
     type="FasterRCNN",
     backbone=dict(
         type="ResNet",
-        depth=50,
+        depth=101,
         num_stages=4,
         out_indices=(0, 1, 2, 3),
         frozen_stages=1,
         norm_cfg=dict(type="BN", requires_grad=True),
         norm_eval=True,
         style="pytorch",
-        init_cfg=dict(type="Pretrained", checkpoint="torchvision://resnet50"),
-        plugins=[
-            dict(
-                cfg=dict(
-                    type="GeneralizedAttention",
-                    spatial_range=-1,
-                    num_heads=8,
-                    attention_type="1111",
-                    kv_stride=2,
-                ),
-                stages=(False, False, True, True),
-                position="after_conv2",
-            )
-        ],
-        dcn=dict(type="DCN", deform_groups=1, fallback_on_stride=False),
-        stage_with_dcn=(False, True, True, True),
+        init_cfg=dict(type="Pretrained", checkpoint="torchvision://resnet101"),
     ),
     neck=dict(
         type="FPN", in_channels=[256, 512, 1024, 2048], out_channels=256, num_outs=5
@@ -264,10 +249,10 @@ optimizer = dict(type="SGD", lr=0.02, momentum=0.9, weight_decay=0.0001)
 optimizer_config = dict(grad_clip=None)
 
 lr_config = dict(
-    policy="step", warmup="linear", warmup_iters=500, warmup_ratio=0.001, step=[8, 11]
+    policy="step", warmup="linear", warmup_iters=500, warmup_ratio=0.001, step=[16, 22]
 )
 
-runner = dict(type="EpochBasedRunner", max_epochs=12)
+runner = dict(type="EpochBasedRunner", max_epochs=24)
 
 checkpoint_config = dict(interval=1)
 
@@ -288,7 +273,3 @@ resume_from = None
 workflow = [("train", 1)]
 
 classes = ("Coverall", "Face_Shield", "Gloves", "Goggles", "Mask")
-
-work_dir = "./work_dirs/faster_rcnn_r50_fpn_attention_1111_dcn_1x_coco"
-
-gpu_ids = range(0, 1)

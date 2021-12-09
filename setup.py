@@ -51,9 +51,7 @@ setup(
     url="https://github.com/Rishit-dagli/CPPE-Dataset",
     author="Rishit Dagli, Ali Mustufa",
     author_email="rishit.dagli@gmail.com",
-    install_requires=[
-        "gdownw ~= 4.2.0",
-    ],
+    install_requires=["gdown ~= 4.2.0", "pycocotools ~= 2.0.3"],
     extras_require={
         "dev": [
             "check-manifest",

@@ -26,7 +26,7 @@ with open(os.path.join(this_directory, "README.md"), encoding="utf-8") as f:
 setup(
     name="cppe5",
     version=get_version("cppe5/version.py"),
-    description="A library to easily download the CPPE-5 dataset.",
+    description="A library to easily download, load and work with the CPPE-5 dataset.",
     packages=find_packages(),
     long_description=long_description,
     long_description_content_type="text/markdown",

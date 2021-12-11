@@ -41,7 +41,7 @@ cppe5.download_data()
 
 ## Convert the PNG images to JPG images
 
-The [convert_png_to_jpg.py](convert_png_to_jpg.py) script is a Python script to
+The [png2jpg.py](png2jpg.py) script is a Python script to
 convert the PNG images in the dataset to JPG images while also converting the
 annotation files.
 
@@ -70,14 +70,14 @@ above, you can directly run the following command to convert the PNG images to
 JPG images and update the annotations:
 
 ```py
-python tools/convert_png_to_jpg.py --default
+python tools/png2jpg.py --default
 ```
 
 If you follow a different directory struccture you should use the following
 command, changing the arguments according to your directory structure:
 
 ```py
-python tools/convert_png_to_jpg.py \
+python tools/png2jpg.py \
     --png_dir data/images \
     --jpg_dir data/images \
     --annotation_file data/annotations/train.json \

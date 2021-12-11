@@ -1,3 +1,35 @@
+## Download Dataset
+
+The [download_data.sh](download_data.sh) is a script to easily download, extract
+and maintain a consistent directory structure while downloading the dataset.
+Though you would be aple to replicate results following your own directory
+structure, we recommend using this script or the Python package to download the
+data.
+
+### Usage
+
+Run the following command to run the script:
+
+```sh
+bash tools/download_data.sh
+```
+
+You can also use the Python package to download the data
+
+- You should first download the Python package:
+
+```sh
+pip install cppe5
+```
+
+- You are now ready to download the data:
+
+```py
+import cppe5
+
+cppe5.download_data()
+```
+
 ## Convert Pascal VOC format to COCO
 
 The [voc2coco.py](voc2coco.py) contains the script to convert the Pascal VOC XML
@@ -46,6 +78,5 @@ the final release of the dataset
 The below command runs this script:
 
 ```sh
-cd tools
-python coco_corrector.py
+python tools/coco_corrector.py
 ```

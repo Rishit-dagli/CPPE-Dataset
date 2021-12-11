@@ -9,7 +9,7 @@ def check_dir(dir_name: str) -> bool:
     return False
 
 
-def download_data(dir_name) -> None:
+def download_data(dir_name="data") -> None:
     if not check_dir(dir_name):
         os.mkdir(dir_name)
     os.chdir(dir_name)

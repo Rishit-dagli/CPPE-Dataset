@@ -1,3 +1,12 @@
+### Tools
+
+This directory includes tools which might be helpful for working with the CPPE-5
+dataset. We also include easy to use and examples of running each tool to help
+you easily get started. Finally, these tools are not only useful for this
+dataset but can be used with other datasets as well.
+
+> Note: In each of the examples in this document, you would be expected to run the command from the respository root and not from the tools directory.
+
 ## Download Dataset
 
 The [download_data.sh](download_data.sh) is a script to easily download, extract

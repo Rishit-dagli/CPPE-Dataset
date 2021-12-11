@@ -30,6 +30,51 @@ import cppe5
 cppe5.download_data()
 ```
 
+## Convert the PNG images to JPG images
+
+The [convert_png_to_jpg.py](convert_png_to_jpg.py) script is a Python script to
+convert the PNG images in the dataset to JPG images while also converting the
+annotation files.
+
+Note: This script is intended only for COCO style annotations.
+
+### Usage
+
+```
+usage: png2jpg.py [-h] [--default [DEFAULT]] [--png_dir PNG_DIR] [--jpg_dir JPG_DIR] [--num_images NUM_IMAGES] [--annotation_file ANNOTATION_FILE]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --default [DEFAULT]   Use the default setting and paths to convert png to jpg
+  --png_dir PNG_DIR     Path to the directory containing png images
+  --jpg_dir JPG_DIR     Path to the directory to save jpg images
+  --num_images NUM_IMAGES
+                        Number of images to convert
+  --annotation_file ANNOTATION_FILE
+                        Path to the annotation file
+```
+
+### Examples
+
+If you downloaded data from the [download_data.sh](download_data.sh) script
+above, you can directly run the following command to convert the PNG images to
+JPG images and update the annotations:
+
+```py
+python tools/convert_png_to_jpg.py --default
+```
+
+If you follow a different directory struccture you should use the following
+command, changing the arguments according to your directory structure:
+
+```py
+python tools/convert_png_to_jpg.py \
+    --png_dir data/images \
+    --jpg_dir data/images \
+    --annotation_file data/annotations/train.json \
+    --num_images 100
+```
+
 ## Convert Pascal VOC format to COCO
 
 The [voc2coco.py](voc2coco.py) contains the script to convert the Pascal VOC XML

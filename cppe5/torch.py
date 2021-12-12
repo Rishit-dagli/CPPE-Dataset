@@ -57,7 +57,7 @@ class Cppe5(torch.utils.data.Dataset):
         return len(self.ids)
 
 
-def tensor_transform() -> torch.Tensor:
+def tensor_transform() -> torchvision.transforms.Compose:
     custom_transforms = []
     custom_transforms.append(torchvision.transforms.ToTensor())
     return torchvision.transforms.Compose(custom_transforms)

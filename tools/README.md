@@ -39,6 +39,38 @@ import cppe5
 cppe5.download_data()
 ```
 
+## Download TF Records
+
+The [download_tfrecords.sh](download_tfrecords.sh) is a script to easily download, extract
+and maintain a consistent directory structure while downloading the TF Record files.
+Though you would be aple to replicate results following your own directory
+structure, we recommend using this script or the Python package to download the
+data.
+
+### Usage
+
+Run the following command to run the script:
+
+```sh
+bash tools/download_tfreocrds.sh
+```
+
+You can also use the Python package to download the data
+
+- You should first download the Python package:
+
+```sh
+pip install cppe5
+```
+
+- You are now ready to download the data:
+
+```py
+import cppe5
+
+cppe5.download_tfrecords()
+```
+
 ## Convert the PNG images to JPG images
 
 The [png2jpg.py](png2jpg.py) script is a Python script to

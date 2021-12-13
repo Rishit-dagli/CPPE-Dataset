@@ -7,6 +7,13 @@ tensorbaord.dev logs for each model as well as a link to the PyTorch model
 (`.pth`) and a TensorFlow SavedModel (`.tar.gz` containing the SavedModel
 directory) files.
 
+#### Notes:
+
+- All the models can also be trained from scratch using the configs provided in the `configs` or `baselines` directory.
+- The metrics are the same as the COCO object detection metrics, more information about this could be found in the original paper.
+- The PyTorch models use the channels first format. The TensorFlow models use the channels last format.
+- The tb.dev dashboards represent the tensorbaord logs for each model training.
+
 ## Baseline Models
 
 This section contains the baseline models that are trained on the CPPE-5 dataset

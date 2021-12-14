@@ -1,4 +1,5 @@
 import tensorflow as tf
+from typing import List
 
 
 def parse_tfrecord_fn(example) -> dict:
@@ -21,7 +22,7 @@ def parse_tfrecord_fn(example) -> dict:
 
 
 def data_loader(
-    record_file_pattern: list[str] = [
+    record_file_pattern: List[str] = [
         "tfrecords/train.record-00000-of-00001",
         "tfrecords/testdev.record-00000-of-00001",
     ]

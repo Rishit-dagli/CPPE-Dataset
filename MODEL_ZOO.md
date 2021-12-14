@@ -1,7 +1,7 @@
 # Model Zoo
 
 This is an exhaustive list of pre-trained models trained on the CPPE-5
-(Medical Personal Protective) Equipment dataset that are currently available and
+(Medical Personal Protective Equipment) dataset that are currently available and
 you could start using any of these models very easily. We also include
 tensorbaord.dev logs for each model as well as a link to the PyTorch model
 (`.pth`) and a TensorFlow SavedModel (`.tar.gz` containing the SavedModel

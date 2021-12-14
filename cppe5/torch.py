@@ -6,7 +6,7 @@ from pycocotools.coco import COCO
 
 import torch
 import torch.utils.data
-
+import torchvision
 
 class Cppe5(torch.utils.data.Dataset):
     def __init__(self, root: str, annotation: str, transforms=None):

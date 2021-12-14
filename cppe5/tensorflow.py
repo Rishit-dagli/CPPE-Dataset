@@ -1,5 +1,6 @@
-import tensorflow as tf
 from typing import List
+
+import tensorflow as tf
 
 
 def parse_tfrecord_fn(example) -> dict:

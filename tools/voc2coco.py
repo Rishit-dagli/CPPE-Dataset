@@ -3,13 +3,14 @@ This is a modified version of https://github.com/yukkyo/voc2coco released under
 MIT License and all credits go to https://github.com/yukkyo.
 """
 
-import os
 import argparse
 import json
+import os
+import re
 import xml.etree.ElementTree as ET
 from typing import Dict, List
+
 from tqdm import tqdm
-import re
 
 
 def get_label2id(labels_path: str) -> Dict[str, int]:

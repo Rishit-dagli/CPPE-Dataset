@@ -1,12 +1,11 @@
 import os
 from typing import Tuple
 
-from PIL import Image
-from pycocotools.coco import COCO
-
 import torch
 import torch.utils.data
 import torchvision
+from PIL import Image
+from pycocotools.coco import COCO
 
 
 class Cppe5(torch.utils.data.Dataset):

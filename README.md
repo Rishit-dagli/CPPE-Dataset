@@ -146,3 +146,5 @@ Awesome! If you want to contribute to this project, you're always welcome! See [
 ## Want to discuss? 💬
 
 Have any questions, doubts or want to present your opinions, views? You're always welcome. You can [start discussions](hhttps://github.com/Rishit-dagli/CPPE-Dataset/discussions).
+
+Have you used this work in your paper, blog, experiments, or more please share it with us by making a discussion under the [Show and Tell category](https://github.com/Rishit-dagli/CPPE-Dataset/discussions/categories/show-and-tell).

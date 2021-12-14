@@ -76,7 +76,7 @@ def data_loader(
 ) -> torch.utils.data.DataLoader:
 
     cppe5 = Cppe5(
-        root=train_data_dir, annotation=train_coco, transforms=tensor_transform()
+        root=train_data_dir, annotation=train_annotation_file, transforms=tensor_transform()
     )
 
     return torch.utils.data.DataLoader(

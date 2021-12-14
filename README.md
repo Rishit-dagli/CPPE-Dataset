@@ -106,6 +106,7 @@ paper and the config files.
 
 We also include the following tools in this repository to make working with the dataset
 a lot easier:
+
 - Download data
 - Download TF Record files
 - Convert PNG images in dataset to JPG Images
@@ -114,6 +115,23 @@ a lot easier:
 
 More information about each tool can be found in the
 [tools/README.md](tools/README.md) file.
+
+## Tutorials
+
+We also present some tutorials on how to use the dataset in this repository as
+Colab notebooks:
+
+- [pytorch_loader.ipynb](notebooks/pytorch_loader.ipynb) <a href="https://colab.research.google.com/github/Rishit-dagli/CPPE-Dataset/blob/main/notebooks/pytorch_loader.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+In  this notebook we will load the CPPE - 5 dataset in PyTorch and also see a quick example of fine-tuning the Faster RCNN model with `torchvision` on this dataset.
+
+- [tensorflow_loader.ipynb](notebooks/tensorflow_loader.ipynb) <a href="https://colab.research.google.com/github/Rishit-dagli/CPPE-Dataset/blob/main/notebooks/tensorflow_loader.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+In this notebook we will load the CPPE - 5 dataset through TF Record files in TensorFlow.
+
+- [visualize.ipynb](notebooks/visualize.ipynb) <a href="https://colab.research.google.com/github/Rishit-dagli/CPPE-Dataset/blob/main/notebooks/visualize.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+In this notebook, we will visualize the CPPE-5 dataset, which could be really helpful to see some sample images and annotations from the dataset.
 
 ## Citation
 

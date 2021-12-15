@@ -63,7 +63,7 @@ The dataset contains the following labels:
 
 ## Model Zoo
 
-More about the pre-trained models could be found in [MODEL_ZOO.md](MODEL_ZOO.md)
+More information about the pre-trained models could be found in [MODEL_ZOO.md](MODEL_ZOO.md)
 and [LITE_MODEL_ZOO.md](LITE_MODEL_ZOO.md) includes models ready for deployment
 on mobile and edge devices.
 
@@ -84,7 +84,6 @@ paper and the config files.
 This section contains the SoTA models that are trained on the CPPE-5 dataset
 . More information about how these are trained could be found in the original
 paper and the config files.
-
 
 |           Method           | AP<sup>box</sup> | AP<sub>50</sub><sup>box</sup> | AP<sub>75</sub><sup>box</sup> | AP<sub>S</sub><sup>box</sup> | AP<sub>M</sub><sup>box</sup> | AP<sub>L</sub><sup>box</sup> | Configs | TensorBoard.dev                                                      | PyTorch model                                                                                                                                  | TensorFlow model                                                                               |
 |:--------------------------:|:----------:|:-----------------:|:-----------------:|:----------------:|:----------------:|:----------------:|:------------:|:----------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------:|

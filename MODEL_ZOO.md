@@ -13,6 +13,9 @@ directory) files.
 - The metrics are the same as the COCO object detection metrics, more information about this could be found in the original paper.
 - The PyTorch models use the channels first format. The TensorFlow models use the channels last format.
 - The tb.dev dashboards represent the tensorbaord logs for each model training.
+- FPS benchmark for models here could be found in the original paper, which are measured on 1 Tesla V100 GPU.
+- These models are trained on either a cluster of TPUs or on multiple Tesla A100 GPUs.
+- More information about model complexity and size can be found in the original paper..
 
 ## Baseline Models
 
@@ -31,7 +34,6 @@ paper and the config files.
 This section contains the SOTA models that are trained on the CPPE-5 dataset
 . More information about how these are trained could be found in the original
 paper and the config files.
-
 
 |           Method           | AP<sup>box</sup> | AP<sub>50</sub><sup>box</sup> | AP<sub>75</sub><sup>box</sup> | AP<sub>S</sub><sup>box</sup> | AP<sub>M</sub><sup>box</sup> | AP<sub>L</sub><sup>box</sup> | Configs | TensorBoard.dev                                                      | PyTorch model                                                                                                                                  | TensorFlow model                                                                               |
 |:--------------------------:|:----------:|:-----------------:|:-----------------:|:----------------:|:----------------:|:----------------:|------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|

@@ -9,6 +9,7 @@ currently available and you could start using any of these models very easily.
 - All the models can also be trained from scratch using the configs provided in the `configs` or `baselines` directory.
 - The metrics are the same as the COCO object detection metrics, more information about this could be found in the original paper.
 - All the model here use the channels first format.
+- We currently do not provide FPS benchmarks for the lite models, we welcome contributions to do so.
 
 |   Method    | AP<sup>box</sup> | TF Lite | TF Lite (FP 16 quantized) | TFJS | TFJS (FP 16 quantized) | TFJS (uint16 quantized) | TFJS (uint8 quantized) |
 |:----------:|:------------:|:--------:|:----------------------------:|:--------:|:----------------------------:|:----------------------------:|:----------------------------:|

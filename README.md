@@ -138,6 +138,10 @@ If you use this dataset, please cite the following paper:
 
 [WIP]
 
+## Acknoweldgements
+
+The authors would like to thank Google for supporting this work by providing Google Cloud credits. The authors would also like to thank Google TPU Research Cloud (TRC) program for providing access to TPUs. The authors are also grateful to Omkar Agrawal for help with verifying the difficult annotations.
+
 ## Want to Contribute 🙋‍♂️?
 
 Awesome! If you want to contribute to this project, you're always welcome! See [Contributing Guidelines](CONTRIBUTING.md). You can also take a look at [open issues](https://github.com/Rishit-dagli/CPPE-Dataset/issues) for getting more information about current or upcoming tasks.

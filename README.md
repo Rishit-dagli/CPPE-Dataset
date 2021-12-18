@@ -67,7 +67,7 @@ The dataset contains the following labels:
 
 ## Model Zoo
 
-More information about the pre-trained models could be found in [MODEL_ZOO.md](MODEL_ZOO.md)
+More information about the pre-trained models (like modlel complexity or FPS benchmark) could be found in [MODEL_ZOO.md](MODEL_ZOO.md)
 and [LITE_MODEL_ZOO.md](LITE_MODEL_ZOO.md) includes models ready for deployment
 on mobile and edge devices.
 

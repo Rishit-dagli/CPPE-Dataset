@@ -36,7 +36,7 @@ This section contains the SOTA models that are trained on the CPPE-5 dataset
 paper and the config files.
 
 |           Method           | AP<sup>box</sup> | AP<sub>50</sub><sup>box</sup> | AP<sub>75</sub><sup>box</sup> | AP<sub>S</sub><sup>box</sup> | AP<sub>M</sub><sup>box</sup> | AP<sub>L</sub><sup>box</sup> | Configs | TensorBoard.dev                                                      | PyTorch model                                                                                                                                  | TensorFlow model                                                                               |
-|:--------------------------:|:----------:|:-----------------:|:-----------------:|:----------------:|:----------------:|:----------------:|------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+|:--------------------------:|:----------:|:-----------------:|:-----------------:|:----------------:|:----------------:|:----------------:|:------------:|:----------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------:|
 |         RepPoints          |    43.0    |        75.9       |        40.1       |       27.3       |       36.7       |       48.0       | [config](configs/reppoints_moment_r50_fpn_gn_2x_coco.py) | [tb.dev](https://tensorboard.dev/experiment/Co6JQVe1RDmxgbMx4gD0Qg/) | [bucket](https://storage.googleapis.com/cppe-5/trained_models/reppoints/reppoints_moment_r50_fpn_gn_2x_coco-18beef36.pth)                      |                                                -                                               |
 |        Sparse RCNN         |    44.0    |        69.6       |        44.6       |       30.0       |       30.6       |       54.7       | [config](configs/sparse_rcnn_r101_fpn_300_proposals_crop_mstrain_480-800_3x_coco.py) | [tb.dev](https://tensorboard.dev/experiment/se3w7zQ7SlyE6T8q59P79w/) | [bucket](https://storage.googleapis.com/cppe-5/trained_models/sparse_rcnn/sparse_rcnn_r101_fpn_300_proposals_crop_mstrain_480-800_3x_coco.pth) |                                                -                                               |
 |            FCOS            |    44.4    |        79.5       |        45.9       |       36.7       |       39.2       |       51.7       | [config](configs/fcos_r101_caffe_fpn_gn-head_mstrain_640-800_2x_coco.py) | [tb.dev](https://tensorboard.dev/experiment/O343s1kRQIKTqs508jESDA/) | [bucket](https://storage.googleapis.com/cppe-5/trained_models/fcos/fcos_r101_caffe_fpn_gn-head_mstrain_640-800_2x_coco-031dc428.pth)           | [bucket](https://storage.googleapis.com/cppe-5/trained_models/fcos/tf_fcos.tar.gz)             |
@@ -50,3 +50,26 @@ paper and the config files.
 |            DCN             |    51.6    |        87.1       |        55.9       |       36.3       |       41.4       |       61.3       | [config](configs/faster_rcnn_r50_fpn_mdpool_1x_coco.py) | [tb.dev](https://tensorboard.dev/experiment/GWTGBFo5TruxPlazzkIpXQ/) | [bucket](https://storage.googleapis.com/cppe-5/trained_models/dcn/faster_rcnn_r50_fpn_mdpool_1x_coco-1d85638a.pth)                             |                                                -                                               |
 |     Empirical Attention    |    52.5    |        86.5       |        54.1       |       38.7       |       43.4       |       61.0       | [config](configs/) | [tb.dev](https://tensorboard.dev/experiment/56OgPsWLTWe1jhAV1i00iw/) | [bucket](https://storage.googleapis.com/cppe-5/trained_models/empirical_attention/faster_rcnn_r50_fpn_attention_1111_dcn_1x_coco-f69549ae.pth) |                                                -                                               |
 |         TridentNet         |    52.9    |        85.1       |        58.3       |       42.6       |       41.3       |       62.6       | [config](configs/tridentnet_r50_caffe_mstrain_3x_coco.py) | [tb.dev](https://tensorboard.dev/experiment/9O0MAFnlRMWWezz1TbLYGQ/) | [bucket](https://storage.googleapis.com/cppe-5/trained_models/tridentnet/tridentnet_r50_caffe_mstrain_3x_coco-eb569217.pth)                    | [bucket](https://storage.googleapis.com/cppe-5/trained_models/tridentnet/tf_tridentnet.tar.gz) |
+
+## Model Complexity
+
+In this section we proide a comparision between model complexities for the aformentioned models.
+
+|          Method           |      AP<sup>box</sup>      | #Params  |   FLOPs   | FPS  |
+|:-------------------------:|:--------------------------:|:--------:|:---------:|:----:|
+|            SSD            |            29.5            | 64.34 M  | 103.216 G | 25.6 |
+|           YOLO            |            38.5            | 61.55 M  | 193.93 G  | 48.1 |
+|         RepPoints         |            43.0            |  36.6 M  | 189.83 G  | 18.8 |
+|        Faster RCNN        |            44.0            | 60.14 M  | 282.75 G  | 15.6 |
+|        Sparse RCNN        |            44.0            | 124.99 M | 241.53 G  | 21.7 |
+|           FCOS            |            44.4            |  50.8 M  | 272.93 G  | 9.7  |
+|         Grid RCNN         |            47.5            | 121.98 M | 553.44 G  | 7.7  |
+|      Deformable DETR      |            48.0            |  40.5 M  | 195.47 G  | 18.8 |
+|           FSAF            |            49.2            | 93.75 M  | 435.88 G  | 5.6  |
+| Localization Distillation |            50.9            | 32.05 M  | 204.71 G  | 19.5 |
+|       VarifocalNet        |            51.0            | 53.54 M  | 180.05 G  | 4.8  |
+|          RegNet           |            51.3            |  31.5 M  | 183.29 G  | 18.2 |
+|       Double Heads        |            52.0            | 148.7 M  | 220.05 G  | 9.5  |
+|            DCN            |            51.6            | 148.71 M | 219.97 G  | 16,6 |
+|    Empirical Attention    |            52.5            | 47.63 M  | 185.83 G  | 12.7 |
+|        TridentNet         |            52.9            |  32.8 M  | 822.13 G  | 4.2  |

@@ -9,6 +9,10 @@ with the goal to allow the study of subordinate categorization of medical
 personal protective equipments, which is not possible with other popular data
 sets that focus on broad level categories.
 
+_**Accompanying paper: CPPE - 5: Medical Personal Protective Equipment Dataset. (out on 18-12-21)**_
+
+_**by Rishit Dagli and Ali Mustufa Shaikh.**_
+
 Some features of this dataset are:
 - high quality images and annotations (~4.6 bounding boxes per image)
 - real-life images unlike any current such dataset

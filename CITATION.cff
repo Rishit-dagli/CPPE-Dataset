@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Dagli
+    given-names: Rishit
+    orcid: "https://orcid.org/0000-0002-7622-3222"
+  - family-names: Shaikh
+    given-names: Ali Mustufa
+date-released: 2021-12-19
+title: "CPPE-Dataset"
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/Rishit-dagli/CPPE-Dataset"
+preferred-citation:
+  identifiers:
+    - type: other
+      value: "arXiv:2112.02100"
+      description: The ArXiv preprint of the paper

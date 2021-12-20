@@ -1,23 +1,23 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: Dagli
-    given-names: Rishit
-    orcid: "https://orcid.org/0000-0002-7622-3222"
-  - family-names: Shaikh
-    given-names: Ali Mustufa
-date-released: 2021-12-19
-title: "CPPE-Dataset"
+- family-names: "Dagli"
+  given-names: "Rishit"
+  orcid: "https://orcid.org/0000-0002-7622-3222"
+- family-names: "Shaikh"
+  given-names: "Ali Mustufa"
+title: "CPPE-5: Medical Personal Protective Equipment Dataset"
 version: 0.1.0
-license: Apache-2.0
-repository-code: "https://github.com/Rishit-dagli/CPPE-Dataset"
+date-released: 2021-12-19
+url: "https://github.com/Rishit-dagli/CPPE-Dataset"
 preferred-citation:
-  type: other
+  type: article
   authors:
-  - family-names: Dagli
-    given-names: Rishit
+  - family-names: "Dagli"
+    given-names: "Rishit"
     orcid: "https://orcid.org/0000-0002-7622-3222"
-  - family-names: Shaikh
-    given-names: Ali Mustufa
-  value: "arXiv:2112.09569"
-  description: The ArXiv preprint of the paper
+  - family-names: "Shaikh"
+    given-names: "Ali Mustufa"
+  journal: "arXiv:2112.09569"
+  title: "arXiv:2112.09569"
+  year: 2021

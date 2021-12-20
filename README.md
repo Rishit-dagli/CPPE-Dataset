@@ -9,7 +9,7 @@ with the goal to allow the study of subordinate categorization of medical
 personal protective equipments, which is not possible with other popular data
 sets that focus on broad level categories.
 
-_**Accompanying paper: CPPE - 5: Medical Personal Protective Equipment Dataset. (out on 18-12-21)**_
+_**Accompanying paper: [CPPE - 5: Medical Personal Protective Equipment Dataset](https://arxiv.org/abs/2112.09569)**_
 
 _**by Rishit Dagli and Ali Mustufa Shaikh.**_
 

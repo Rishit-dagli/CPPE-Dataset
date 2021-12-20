@@ -139,9 +139,26 @@ In this notebook, we will visualize the CPPE-5 dataset, which could be really he
 
 ## Citation
 
-If you use this dataset, please cite the following paper:
+If you use this work, please cite the following paper:
 
-[WIP]
+**BibTeX:**
+
+```bibtex
+@misc{dagli2021cppe5,
+      title={CPPE-5: Medical Personal Protective Equipment Dataset}, 
+      author={Rishit Dagli and Ali Mustufa Shaikh},
+      year={2021},
+      eprint={2112.09569},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
+**MLA:**
+
+```
+Dagli, Rishit, and Ali Mustufa Shaikh. ‘CPPE-5: Medical Personal Protective Equipment Dataset’. ArXiv:2112.09569 [Cs], Dec. 2021. arXiv.org, http://arxiv.org/abs/2112.09569.
+```
 
 ## Acknoweldgements
 

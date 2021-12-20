@@ -1,7 +1,7 @@
 # CPPE - 5 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FRishit-dagli%2Fhttps://github.com/Rishit-dagli/CPPE-Dataset)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FRishit-dagli%2Fhttps://github.com/Rishit-dagli/CPPE-Dataset)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/Rishit-dagli/CPPE-Dataset?style=social)
-[![arXiv](https://img.shields.io/badge/arXiv-2112.09569-b31b1b.svg)](https://arxiv.org/abs/2112.09569)
+[![arXiv](https://img.shields.io/badge/paper-arXiv:2112.09569-b31b1b.svg?logo=arxiv)](https://arxiv.org/abs/2112.09569)
 ![PyPI](https://img.shields.io/pypi/v/cppe5)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 

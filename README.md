@@ -22,6 +22,11 @@ Some features of this dataset are:
 
 ![](media/annotation_type.png)
 
+## Updates
+
+- 05/01/2022 - This paper got featured on Google Research TRC's [publication section](https://sites.research.google/trc/publications/)
+- 20/12/2021 - First public release of the CPPE - 5 dataset on arXiv
+
 ## Get the data
 
 We strongly recommend you use either the downlaoder script or the Python package

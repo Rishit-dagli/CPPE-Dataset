@@ -59,6 +59,68 @@ import cppe5
 cppe5.download_data()
 ```
 
+## Data Loaders
+
+We provide PyTorch and TensorFlow data loaders in this repository, the
+dataset can also be loaded from [Hugging Face Datasets](https://github.com/huggingface/datasets). To use the data
+loaders in this repository you would need to install the Python package
+first:
+
+```bash
+pip install cppe5
+```
+
+### Hugging Face Datasets
+
+Install the datasets library first:
+
+```bash
+pip install datasets
+```
+
+```py
+from datasets import load_dataset
+
+dataset = load_dataset("cppe-5")
+```
+
+### PyTorch `DataLoader`
+
+A ready to run Google Colab example can be found at [notebooks/pytorch_loader.ipynb](notebooks/pytorch_loader.ipynb).
+
+```py
+import cppe5
+from cppe5.torch import data_loader
+import os
+
+cppe5.download_data()
+os.chdir("..")
+data_loader = cppe5.torch.data_loader() # torch.utils.data.DataLoader
+
+# Fetch all images and annotations
+device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+
+# DataLoader is iterable over Dataset
+for imgs, annotations in data_loader:
+    imgs = list(img.to(device) for img in imgs)
+    annotations = [{k: v.to(device) for k, v in t.items()} for t in annotations]
+```
+
+### TensorFlow Loader
+
+A ready to run Google Colab example can be found at [notebooks/tensorflow_loader.ipynb](notebooks/tensorflow_loader.ipynb).
+
+```
+import cppe5
+from cppe5.tensorflow import data_loader
+
+cppe5.download_tfrecords()
+os.chdir("..")
+
+dataset = cppe5.tensorflow.data_loader() # tf.data.Dataset
+iter(dataset).next()
+```
+
 ## Labels
 
 The dataset contains the following labels:

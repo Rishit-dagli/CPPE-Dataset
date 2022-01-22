@@ -2,6 +2,8 @@
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/Rishit-dagli/CPPE-Dataset?style=social)
 [![arXiv](https://img.shields.io/badge/paper-arXiv:2112.09569-b31b1b.svg?logo=arxiv)](https://arxiv.org/abs/2112.09569)
+[![Models TF Hub](https://img.shields.io/badge/Models-TF%20Hub-orange?style=flat&logo=tensorflow)](https://tfhub.dev/rishit-dagli/collections/cppe5)
+
 ![PyPI](https://img.shields.io/pypi/v/cppe5)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 

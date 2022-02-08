@@ -113,7 +113,7 @@ for imgs, annotations in data_loader:
 
 A ready to run Google Colab example can be found at [notebooks/tensorflow_loader.ipynb](notebooks/tensorflow_loader.ipynb).
 
-```
+```py
 import cppe5
 from cppe5.tensorflow import data_loader
 

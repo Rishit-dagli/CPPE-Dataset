@@ -26,6 +26,7 @@ Some features of this dataset are:
 
 ## Updates
 
+- 06/01/2022 - Many thanks to [@mariosasko](https://github.com/mariosasko) for creating a [Hugging Face Datasets loader](https://huggingface.co/datasets/cppe-5).
 - 05/01/2022 - This paper got featured on Google Research TRC's [publication section](https://sites.research.google/trc/publications/)
 - 20/12/2021 - First public release of the CPPE - 5 dataset on arXiv
 

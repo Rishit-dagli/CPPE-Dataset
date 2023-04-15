@@ -35,9 +35,9 @@ Some features of this dataset are:
 We strongly recommend you use either the downlaoder script or the Python package
 to download the dataset however you could also download and extract it manually.
 
-| Name | Size | Drive | Bucket | MD5 checksum |
+| Name | Size | Drive | wget Link | MD5 checksum |
 |:----:|:----:|:----:|:----:|:------------:|
-| `dataset.tar.gz` | ~230 MB | [Download](https://drive.google.com/file/d/1MGnaAfbckUmigGUvihz7uiHGC6rBIbvr/view?usp=sharing) | [Download](https://storage.googleapis.com/cppe-5/dataset.tar.gz) | `f4e043f983cff94ef82ef7d57a879212` |
+| `dataset.tar.gz` | ~230 MB | [Download](https://drive.google.com/file/d/1MGnaAfbckUmigGUvihz7uiHGC6rBIbvr/view?usp=sharing) | [Download](https://github.com/Rishit-dagli/CPPE-Dataset/releases/download/v0.1.0/dataset.tar.gz) | `f4e043f983cff94ef82ef7d57a879212` |
 
 ### Downloader Script
 

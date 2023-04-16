@@ -46,7 +46,7 @@ The easiest way to download the dataset is to use the downloader script:
 ```bash
 git clone https://github.com/Rishit-dagli/CPPE-Dataset.git
 cd CPPE-Dataset
-bash tools/download.sh
+bash tools/download_data.sh
 ```
 
 ### Python package
